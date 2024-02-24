@@ -10,6 +10,7 @@
   },
   "scripts": {
     "setup": "node setup.js",
+    "proof": "node proof.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
