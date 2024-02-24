@@ -17,37 +17,31 @@ initialize().then((zokratesProvider) => {
     "0", // b
     "0", // c
     "0", // k
-    [ // sha256([a, b, c, 0])
+    [
+      // sha256([a, b, c, 0])
       "326522724692461750427768532537390503835",
       "89059515727727869117346995944635890507",
     ],
-    [ // sha256([a, b, c, k])
+    [
+      // sha256([a, b, c, k])
       "326522724692461750427768532537390503835",
       "89059515727727869117346995944635890507",
     ],
-  ]); 
-  console.log("[2] Witness Generated.")
-  
-  if(!output) {
+  ]);
+  console.log("[2] Witness Generated.");
+
+  if (!output) {
     console.error("[ERROR] Invalid Input.");
     process.exit(1);
   }
-  
-  const pk = new Uint8Array(fs.readFileSync("files/pk.bin")); 
+
+  const pk = new Uint8Array(fs.readFileSync("files/pk.bin"));
   console.log("[3] Proving Key Loaded.");
-  
+
   // generate proof
-  const proof = zokratesProvider.generateProof(
-    artifacts.program,
-    witness,
-    pk
-  ); 
+  const proof = zokratesProvider.generateProof(artifacts.program, witness, pk);
   console.log("[4] Proof Generated.");
-  
-  fs.writeFileSync("files/proof.json", JSON.stringify(proof)); 
+
+  fs.writeFileSync("files/proof.json", JSON.stringify(proof, null, 4));
   console.log("[5] Proof Stored.");
-  
-  //   // or verify off-chain
-  //   const isVerified = zokratesProvider.verify(keypair.vk, proof);
-  //   console.log(isVerified ? "Verified": "Not Verified");
 });

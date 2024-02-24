@@ -25,7 +25,7 @@ initialize().then((zokratesProvider) => {
   const vk = keypair.vk;
 
   // store verifier key and proving key
-  fs.writeFileSync("files/vk.json", JSON.stringify(vk));
+  fs.writeFileSync("files/vk.json", JSON.stringify(vk, null, 4));
   console.info("[3] Verifier Key Stored.");
   fs.writeFileSync("files/pk.bin", pk);
   console.info("[4] Proving Key Stored.");
