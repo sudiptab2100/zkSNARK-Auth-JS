@@ -1,0 +1,31 @@
+{
+  "name": "zkauth-zokratesjs",
+  "version": "0.0.1",
+  "description": "JS libraries for zkSNARK-Auth using zokrates.js ",
+  "main": "setup.js",
+  "type": "module",
+  "dependencies": {
+    "pako": "^2.1.0",
+    "zokrates-js": "^1.1.9"
+  },
+  "scripts": {
+    "setup": "node setup.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudiptab2100/zkSNARK-Auth-JS.git"
+  },
+  "keywords": [
+    "zkp",
+    "zk",
+    "zkSNARK",
+    "zokrates"
+  ],
+  "author": "Sudipta Basak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sudiptab2100/zkSNARK-Auth-JS/issues"
+  },
+  "homepage": "https://github.com/sudiptab2100/zkSNARK-Auth-JS#readme"
+}
