@@ -12,21 +12,14 @@ initialize().then((zokratesProvider) => {
   console.info("[1] Compilation Done.");
 
   // computation
+  const hash_data = JSON.parse(fs.readFileSync("files/hash_data.json"));
   const { witness, output } = zokratesProvider.computeWitness(artifacts, [
-    "0", // a
-    "0", // b
-    "0", // c
-    "0", // k
-    [
-      // sha256([a, b, c, 0])
-      "326522724692461750427768532537390503835",
-      "89059515727727869117346995944635890507",
-    ],
-    [
-      // sha256([a, b, c, k])
-      "326522724692461750427768532537390503835",
-      "89059515727727869117346995944635890507",
-    ],
+    hash_data.a, // a
+    hash_data.b, // b
+    hash_data.c, // c
+    hash_data.k, // k
+    hash_data.h, // h = sha256([a, b, c, 0])
+    hash_data.hh, // hh = sha256([a, b, c, k])
   ]);
   console.log("[2] Witness Generated.");
 
