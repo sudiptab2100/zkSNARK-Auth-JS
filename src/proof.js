@@ -7,7 +7,7 @@ const fileSystemResolver = (from) => {
 };
 
 initialize().then((zokratesProvider) => {
-  const source = fileSystemResolver("code.zok");
+  const source = fileSystemResolver("src/code.zok");
   const artifacts = zokratesProvider.compile(source);
   console.info("[1] Compilation Done.");
 

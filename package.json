@@ -9,9 +9,9 @@
     "zokrates-js": "^1.1.9"
   },
   "scripts": {
-    "setup": "node setup.js",
-    "proof": "node proof.js",
-    "verify": "node verify.js",
+    "setup": "node src/setup.js",
+    "proof": "node src/proof.js",
+    "verify": "node src/verify.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
