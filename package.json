@@ -5,6 +5,7 @@
   "main": "setup.js",
   "type": "module",
   "dependencies": {
+    "ethers": "^6.11.1",
     "pako": "^2.1.0",
     "zokrates-js": "^1.1.9"
   },
