@@ -12,7 +12,8 @@
   "scripts": {
     "setup": "node src/setup.js",
     "proof": "node src/proof.js",
-    "verify": "node src/verify.js",
+    "verify-onchain": "node src/verify_onchain.js",
+    "verify-offchain": "node src/verify_offchain.js",
     "solidity-ip": "node src/solidity-ip.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
