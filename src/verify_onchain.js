@@ -67,4 +67,3 @@ const ip = inputs.map(BigInt);
 
 const result = await VerifierContract.verifyTx(pf, ip);
 console.log(result ? "Proof is valid" : "Proof is invalid");
-console.log(signer.address);
