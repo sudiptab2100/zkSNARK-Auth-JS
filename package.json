@@ -14,7 +14,6 @@
     "proof": "node src/proof.js",
     "verify-onchain": "node src/verify_onchain.js",
     "verify-offchain": "node src/verify_offchain.js",
-    "solidity-ip": "node src/solidity-ip.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
