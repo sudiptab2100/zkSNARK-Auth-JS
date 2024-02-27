@@ -1,52 +1,7 @@
 import { ethers } from "ethers";
 import fs from "fs";
 
-
-const abi = [
-  {
-    inputs: [
-      {
-        components: [
-          {
-            components: [
-              { internalType: "uint256", name: "X", type: "uint256" },
-              { internalType: "uint256", name: "Y", type: "uint256" },
-            ],
-            internalType: "struct Pairing.G1Point",
-            name: "a",
-            type: "tuple",
-          },
-          {
-            components: [
-              { internalType: "uint256[2]", name: "X", type: "uint256[2]" },
-              { internalType: "uint256[2]", name: "Y", type: "uint256[2]" },
-            ],
-            internalType: "struct Pairing.G2Point",
-            name: "b",
-            type: "tuple",
-          },
-          {
-            components: [
-              { internalType: "uint256", name: "X", type: "uint256" },
-              { internalType: "uint256", name: "Y", type: "uint256" },
-            ],
-            internalType: "struct Pairing.G1Point",
-            name: "c",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Verifier.Proof",
-        name: "proof",
-        type: "tuple",
-      },
-      { internalType: "uint256[6]", name: "input", type: "uint256[6]" },
-    ],
-    name: "verifyTx",
-    outputs: [{ internalType: "bool", name: "r", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-];
+const abi = JSON.parse(fs.readFileSync('files/abi.json'));
 const contractAddress = "0x6000f6007f83FD8277052550F65226EfFe3A5DfF";
 const provider = new ethers.JsonRpcProvider("https://rpc.sepolia.org", 11155111);
 const signer = new ethers.Wallet("7fe78a6e037ae6314755c163cdc3be598c7ab160f3368107a6cd46f66dc5bdef", provider); // Random private key taken from google
