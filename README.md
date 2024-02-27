@@ -16,6 +16,12 @@ Generate Prover and Verifier keys & Verifier Smart Contract
 npm run setup
 ```
 
+Generate Hash Values from `password` and `k`
+
+```bash
+npm run generate-hash
+```
+
 Generate Proof
 
 ```bash
@@ -33,4 +39,3 @@ Verify Proof (OffChain)
 ```bash
 npm run verify_offchain
 ```
-
