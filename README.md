@@ -1,3 +1,8 @@
+# zkSNARK Authentication
+
+- Used ZoKrates library to implement zkSNARK based authentication on EVM blockchain
+- Prover can prove to smart contract verifier his knowledge of hash pre-image to authenticate himself
+
 # Groth16 Verifier & Proof Generator (ZoKrates.js)
 
 This is a simple example of how to use ZoKrates.js to generate a proof and verify it using the Groth16 verifier (OnChain - Solidity, OffChain).
