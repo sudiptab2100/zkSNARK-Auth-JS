@@ -36,11 +36,11 @@ npm run proof
 Verify Proof (OnChain)
 
 ```bash
-npm run verify_onchain
+npm run verify-onchain
 ```
 
 Verify Proof (OffChain)
 
 ```bash
-npm run verify_offchain
+npm run verify-offchain
 ```
